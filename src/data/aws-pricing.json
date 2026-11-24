@@ -1,0 +1,37 @@
+{
+  "regions": {
+    "ap-south-1": { "name": "ap-south-1 (Mumbai)", "multiplier": 1.08 },
+    "ap-south-2": { "name": "ap-south-2 (Hyderabad)", "multiplier": 1.08 },
+    "us-east-1": { "name": "us-east-1 (N. Virginia)", "multiplier": 1.0 },
+    "us-west-2": { "name": "us-west-2 (Oregon)", "multiplier": 1.0 },
+    "eu-west-1": { "name": "eu-west-1 (Ireland)", "multiplier": 1.11 },
+    "ap-southeast-1": { "name": "ap-southeast-1 (Singapore)", "multiplier": 1.15 }
+  },
+  "services": {
+    "EC2": {
+      "t3.micro": 0.0104,
+      "t3.small": 0.0208,
+      "t3.medium": 0.0416,
+      "t4g.medium": 0.0336,
+      "m6i.large": 0.096
+    },
+    "EBS": {
+      "gp2": 0.10,
+      "gp3": 0.08
+    },
+    "RDS": {
+      "db.t3.micro": 0.017,
+      "db.t3.medium": 0.068,
+      "db.r6g.large": 0.26
+    },
+    "ALB": {
+      "hourly": 0.0225
+    },
+    "NAT": {
+      "hourly": 0.045
+    },
+    "S3": {
+      "storagePerGb": 0.023
+    }
+  }
+}

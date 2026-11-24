@@ -1,0 +1,32 @@
+{
+  "name": "aws-arch-studio",
+  "displayName": "AWS Arch Studio (2D/3D & FinOps)",
+  "description": "Design AWS architectures in 2D/3D, calculate live monthly costs, and apply FinOps optimizations inside VS Code.",
+  "version": "0.1.0",
+  "publisher": "hari930531",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Visualization", "Other"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "awsArchStudio.open",
+        "title": "AWS Arch Studio: Open Architecture Designer"
+      }
+    ]
+  },
+  "scripts": {
+    "build:ext": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "build:ui": "cd webview-ui && npm run build",
+    "build": "npm run build:ui && npm run build:ext"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.4.0"
+  }
+}
